@@ -1,0 +1,5 @@
+package carson.diehl1.MyItems;
+
+public class BaseItem {
+
+}

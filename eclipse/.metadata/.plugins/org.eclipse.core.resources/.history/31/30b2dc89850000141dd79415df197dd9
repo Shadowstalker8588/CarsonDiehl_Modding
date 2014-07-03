@@ -1,0 +1,5 @@
+package carson.diehl.client;
+
+public class ClientProxy {
+
+}

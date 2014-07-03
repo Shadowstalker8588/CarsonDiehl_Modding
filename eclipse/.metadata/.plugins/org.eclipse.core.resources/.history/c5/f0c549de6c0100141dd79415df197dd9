@@ -1,0 +1,17 @@
+package carson.diehl1.MyItems;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.item.ItemFood;
+
+
+public class FoodSushi extends ItemFood{
+	
+	public FoodSushi(int i, int j, boolean b) {
+		super(j,b);
+		setTextureName("CarsonsMod:Sushi");
+		
+	}
+
+}

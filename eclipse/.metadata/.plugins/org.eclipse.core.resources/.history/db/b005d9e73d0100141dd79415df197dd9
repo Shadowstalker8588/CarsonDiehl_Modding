@@ -1,0 +1,34 @@
+package carson.diehl1;
+
+
+//Recipes
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.item.ItemStack;
+import net.minecraft.init.Items;
+import net.minecraft.init.Blocks;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraft.item.crafting.FurnaceRecipes;
+import cpw.mods.fml.common.registry.GameRegistry;
+
+public class MyCode {
+  
+	public static void MyBlocks(){		
+		
+	}
+	public static void MyRecipes(){
+		 GameRegistry.addShapelessRecipe( new ItemStack(Items.fish),new Object[] {new ItemStack(Blocks.leaves)});
+		 GameRegistry.addShapelessRecipe( new ItemStack(Items.gold_nugget),new Object[] {new ItemStack(Blocks.iron_ore)});
+		 
+		 ItemStack rotten_fleshStack = new ItemStack(Items.rotten_flesh);
+		 ItemStack stringStack = new ItemStack(Items.string);
+		 ItemStack stickStack = new ItemStack(Items.stick);
+		 GameRegistry.addShapelessRecipe( new ItemStack(Items.leather),new Object[] {rotten_fleshStack, stringStack});
+		 GameRegistry.addShapelessRecipe( new ItemStack(Blocks.planks),new Object[] {stickStack,stickStack});
+		 GameRegistry.addSmelting(Items.bucket, new ItemStack(Items.iron_ingot,3), 0.01F);
+		 GameRegistry.addSmelting(Items.iron_sword, new ItemStack(Items.iron_ingot), 0.05);
+		 
+	}
+	public static void MyItems(){
+		
+	}
+}
