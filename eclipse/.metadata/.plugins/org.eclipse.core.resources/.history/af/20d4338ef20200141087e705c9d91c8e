@@ -1,0 +1,43 @@
+package carson.diehl1.armor;
+
+import net.minecraft.entity.Entity;
+import net.minecraft.item.ItemArmor;
+import net.minecraft.item.ItemStack;
+import carson.diehl1.MyCode;
+
+public class Armor extends ItemArmor {
+
+	public Armor(ArmorMaterial material, int id, int placement) {
+		super(material, id, placement);
+		
+	if (placement == 0) {
+		this.setTextureName("carsonsmod:helmet");
+	}
+	
+	if (placement == 1) {
+		this.setTextureName("carsonsmod:Amulet of Rubies");
+	}
+	
+    if (placement == 2) {
+    	this.setTextureName("carsonsmod:leggings");
+    }
+    
+    if (placement == 3) {
+    	this.setTextureName("carsonsmod:boots");
+    }
+	}
+	public String getArmorTexture(ItemStack stack, Entity entity, int slot,
+			String type) {
+		if (stack.getItem() == MyCode.ArmorHelmet
+				|| (stack.getItem() == MyCode.ArmorChestplate || (stack
+						.getItem() == MyCode.ArmorLeggings))) {
+			return "RubyMod:textures/armor/RubyArmor_1.png";
+		}
+		if (stack.getItem() == MyCode.ArmorBoots) {
+			return "RubyMod:textures/armor/RubyArmor_2.png";
+		} else {
+			return null;
+		}
+
+	}
+}

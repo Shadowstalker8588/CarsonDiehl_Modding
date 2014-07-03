@@ -1,0 +1,60 @@
+package carson.diehl1.armor;
+
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemArmor;
+import net.minecraft.item.ItemStack;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
+import net.minecraft.world.World;
+import carson.diehl1.MyCode;
+
+public class Armor extends ItemArmor {
+
+	public Armor(ArmorMaterial material, int id, int placement) {
+		super(material, id, placement);
+	
+			
+		
+	if (placement == 0) {
+		this.setTextureName("carsonsmod:helmet");
+	}
+	
+	if (placement == 1) {
+		this.setTextureName("carsonsmod:Amulet of Rubies");
+	}
+	
+    if (placement == 2) {
+    	this.setTextureName("carsonsmod:leggings");
+    }
+    
+    if (placement == 3) {
+    	this.setTextureName("carsonsmod:boots");
+    }
+    
+	}
+	public String getArmorTexture(ItemStack stack, Entity entity, int slot,
+			String type) {
+		if (stack.getItem() == MyCode.ArmorHelmet
+				|| (stack.getItem() == MyCode.ArmorChestplate || (stack
+						.getItem() == MyCode.ArmorLeggings))) {
+			return "carsonsmod:textures/armor/Amulet of Rubies.png";
+		}
+		if (stack.getItem() == MyCode.ArmorBoots) {
+			return "RubyMod:textures/armor/RubyArmor_2.png";
+		} else {
+			return null;
+		}
+		
+		}
+	
+	@Override
+	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
+		if (player.getCurrentArmor(2) != null) {
+			ItemStack chestplate = player.getCurrentArmor(2);
+			if (chestplate.getItem() == MyCode.ArmorChestplate)
+				player.addPotionEffect(new PotionEffect(Potion.nightVision.getId(), 500));
+		}
+
+	}
+}

@@ -47,17 +47,26 @@ import carson.diehl1.MyItems.RiceBowl;
 import carson.diehl1.MyItems.Rice;
 import carson.diehl1.MyItems.Riceball;
 import carson.diehl1.MyItems.SpamMusabi;
+import carson.diehl1.armor.Armor;
 
 //My Tools
 import net.minecraftforge.common.util.EnumHelper;
 import carson.diehl1.MyItems.Knife;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
 
 public class MyCode {
+	
+	//Armor ID's
+	public static int helmetID;
+	public static int chestplateID;
+	public static int leggingsID;
+	public static int bootsID;
+	
 	
 	//List Setup here #setupBLOCK
 	public static Block rubyOre;
 	public static Block garnetOre;
-	
+	a
 	//List Items Here #setupITEM
 	public static Item rubyGem;
 	public static Item Sushi = new ItemFood(32,6,true);
@@ -68,10 +77,21 @@ public class MyCode {
 	public static Item SpamMusabi = new ItemFood(32,6,false);
 	
 	
+	
 	//Tools
 	public static Item Knife;
 	public static Item.ToolMaterial STEEL = EnumHelper.addToolMaterial("STEEL",3,592,7.0F,1.5F,10); 
+	
+	//Armor
+	public static ArmorMaterial ArmorMaterial = EnumHelper.addArmorMaterial("ArmorMaterial",35,new int []{3,4,5,2}, 30);
+	
+	public static Item ArmorHelmet = new Armor(ArmorMaterial, helmetID, 0).setUnlocalizedName("ArmorHelmet");
+	public static Item ArmorChestplate = new Armor(ArmorMaterial, chestplateID, 1).setUnlocalizedName("ArmorChestplate");
+	public static Item ArmorLeggings = new Armor(ArmorMaterial, leggingsID, 2).setUnlocalizedName("ArmorLeggings");
+	public static Item ArmorBoots = new Armor(ArmorMaterial, bootsID, 3).setUnlocalizedName("ArmorBoots");
   
+	
+	
 	public static void MyBlocks(){	 
 		
 		//Blocks #setupBLOCK
@@ -146,6 +166,12 @@ public class MyCode {
 		 GameRegistry.addShapelessRecipe( new ItemStack(Sushi), new Object[] {riceballStack,salmonStack});
 		 GameRegistry.addShapelessRecipe( new ItemStack(Sushi), new Object[] {riceballStack,fishStack});
 		 GameRegistry.addShapelessRecipe( new ItemStack(RiceBowl), new Object[] {riceStack,bowlStack,riceStack});
+		 GameRegistry.addRecipe(new ItemStack(ArmorChestplate), new Object[]{
+			 "AAA",
+			 "ABA",
+			 "AAA",
+			 'A',Items.gold_ingot,'B',rubyGem
+		     });
 		 
 		 
 		 
@@ -179,6 +205,8 @@ public class MyCode {
 		GameRegistry.registerItem(Rice,"Rice");
 		GameRegistry.registerItem(Riceball,"Riceball");
 		GameRegistry.registerItem(SpamMusabi,"SpamMusabi");
+		GameRegistry.registerItem(ArmorChestplate,"ArmorChestplate");
+		
 		
 	}
 }
