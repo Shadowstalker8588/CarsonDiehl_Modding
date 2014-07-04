@@ -54,7 +54,7 @@ public class Armor extends ItemArmor {
 		if (player.getCurrentArmor(2) != null) {
 			ItemStack chestplate = player.getCurrentArmor(2);
 			if (chestplate.getItem() == MyCode.ArmorChestplate)
-				player.addPotionEffect(new PotionEffect(Potion.heal.getId(), 100));
+				player.addPotionEffect(new PotionEffect(Potion.heal.getId(), 120000000));
 		}
 
 	}

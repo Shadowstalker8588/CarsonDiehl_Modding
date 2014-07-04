@@ -66,7 +66,7 @@ public class MyCode {
 	//List Setup here #setupBLOCK
 	public static Block rubyOre;
 	public static Block garnetOre;
-	
+	a
 	//List Items Here #setupITEM
 	public static Item rubyGem;
 	public static Item Sushi = new ItemFood(32,6,true);
@@ -89,7 +89,6 @@ public class MyCode {
 	public static Item ArmorChestplate = new Armor(ArmorMaterial, chestplateID, 1).setUnlocalizedName("ArmorChestplate");
 	public static Item ArmorLeggings = new Armor(ArmorMaterial, leggingsID, 2).setUnlocalizedName("ArmorLeggings");
 	public static Item ArmorBoots = new Armor(ArmorMaterial, bootsID, 3).setUnlocalizedName("ArmorBoots");
-	public static Item ArmorChestplate1 = new Armor(ArmorMaterial, chestplateID, 1).setUnlocalizedName("ArmorChestplate1");
   
 	
 	

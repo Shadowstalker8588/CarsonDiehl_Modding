@@ -25,8 +25,8 @@ public class Armor extends ItemArmor {
 	}
 	
 	
-    if (placement == 2 ) {
-    	this.setTextureName("carsonsmod:leggings");
+    if (placement == 1 ) {
+    	this.setTextureName("carsonsmod:Diamond Amulet");
     }
     
     if (placement == 3) {
@@ -54,7 +54,7 @@ public class Armor extends ItemArmor {
 		if (player.getCurrentArmor(2) != null) {
 			ItemStack chestplate = player.getCurrentArmor(2);
 			if (chestplate.getItem() == MyCode.ArmorChestplate)
-				player.addPotionEffect(new PotionEffect(Potion.heal.getId(), 100));
+				player.addPotionEffect(new PotionEffect(Potion.heal.getId(), 120000000));
 		}
 
 	}
